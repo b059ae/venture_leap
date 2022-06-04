@@ -1,0 +1,4 @@
+controllers:
+    resource: ../src/Controller/v1/
+    type: attribute
+    prefix: v1
