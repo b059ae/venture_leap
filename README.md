@@ -41,19 +41,24 @@ How to install Symfony CLI [https://symfony.com/download](https://symfony.com/do
 ```symfony server:start```
 
 # Endpoints
-GET http://127.0.0.1:8000/v1/events # Get all events, default limit is 10
-GET http://127.0.0.1:8000/v1/events?limit=5 # Get first 5 events
-GET http://127.0.0.1:8000/v1/events?limit=5&offset=5 # Get events from 6 to 10
-GET http://127.0.0.1:8000/v1/events?type=info # Get events filtered by type "info"
+```GET http://127.0.0.1:8000/v1/events # Get all events, default limit is 10```
 
+```GET http://127.0.0.1:8000/v1/events?limit=5 # Get first 5 events```
+
+```GET http://127.0.0.1:8000/v1/events?limit=5&offset=5 # Get events from 6 to 10```
+
+```GET http://127.0.0.1:8000/v1/events?type=info # Get events filtered by type "info"```
+
+```
 POST http://127.0.0.1:8000/v1/types # Create new type
 Content-Type: application/json
 
 {
 "name": "debug"
 }
+```
 
-
+```
 POST http://127.0.0.1:8000/v1/events # Create new event
 Content-Type: application/json
 
@@ -61,3 +66,4 @@ Content-Type: application/json
 "details": "text",
 "type": "info"
 }
+```
