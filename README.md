@@ -9,28 +9,35 @@ Very simple Symfony app modeling an audit log that allows for (via a JSON API):
 * PHP 8.1
 
 ```git clone git@github.com:b059ae/venture_leap.git && cd venture_leap```
+
 ```composer install``` 
 
 Specify DB connection in .env file. The easiest way is to use sqlite.
+
 ```touch var/database.sqlite```
 
 Run migrations
+
 ```php bin/console doctrine:migrations:migrate```
 
 Load data fixtures 
+
 ```php bin/console doctrine:fixtures:load```
 
 # Tests
 Prepare test database
 
 ```touch var/database_test.sqlite```
+
 ```php bin/console doctrine:migrations:migrate --env=test```
+
 ```php bin/console doctrine:fixtures:load --env=test```
 
 ```php bin/phpunit```
 
 # Run server
 How to install Symfony CLI [https://symfony.com/download](https://symfony.com/download)
+
 ```symfony server:start```
 
 # Endpoints
